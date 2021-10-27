@@ -81,6 +81,10 @@ body {
   opacity: 0.9;
 }
 
+.container .menu {
+  display: none;
+}
+
 .container .nft-title {
   margin-top: 1em;
   text-align: center;
@@ -121,5 +125,84 @@ body {
 .container .nfts .nft-box .nft-item .nft img {
   width: 100%;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-color: black;
+    overflow-x: hidden;
+  }
+  .container {
+    padding: 5em 10em;
+  }
+  .container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container nav .left-nav .logo {
+    font-weight: 800;
+  }
+  .container nav .right-nav .menu {
+    display: inline-block;
+    background: none;
+    font: inherit;
+    padding: 0.2em 1em;
+    color: white;
+    border-bottom: solid white 0px;
+    -webkit-transition: 0.05s;
+    transition: 0.05s;
+  }
+  .container nav .right-nav .menu:hover {
+    border-bottom: solid white 2px;
+  }
+  .container nav .right-nav .menu-btn {
+    display: none;
+    font-size: 2.5em;
+    cursor: pointer;
+  }
+  .container .menu-bar {
+    display: none;
+  }
+  .container .nft-title {
+    margin-top: 1em;
+    text-align: center;
+    letter-spacing: 0.5em;
+  }
+  .container .nfts .nft-box {
+    text-align: left;
+    list-style: none;
+  }
+  .container .nfts .nft-box .nft-item {
+    display: inline-block;
+    width: 31em;
+    padding: 10px;
+  }
+  .container .nfts .nft-box .nft-item .nft {
+    padding-top: 2.5em;
+    text-align: center;
+    overflow: hidden;
+  }
+  .container .nfts .nft-box .nft-item .nft .title {
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: 700;
+  }
+  .container .nfts .nft-box .nft-item .nft .datecreated {
+    padding-bottom: 1em;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 400;
+  }
+  .container .nfts .nft-box .nft-item .nft img {
+    width: 100%;
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=index.css.map */
