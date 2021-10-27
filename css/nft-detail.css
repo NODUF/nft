@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  padding: 1.5em;
+}
+
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container nav .left-nav .logo {
+  font-weight: 800;
+}
+
+.container nav .right-nav .menu-icon {
+  font-size: 2.5em;
+}
+
+.container .nft-title {
+  margin-top: 1em;
+  text-align: center;
+  letter-spacing: 0.5em;
+}
+
+.container .nfts .nft-box {
+  margin-top: 2.5em;
+  text-align: left;
+  list-style: none;
+}
+
+.container .nfts .nft-box .nft-item {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+
+.container .nfts .nft-box .nft-item .nft {
+  overflow: hidden;
+}
+
+.container .nfts .nft-box .nft-item .nft .title {
+  text-align: center;
+  font-size: 1.7em;
+  line-height: 1em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.container .nfts .nft-box .nft-item .nft p {
+  margin-top: 1em;
+  font-size: 0.9em;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.container .nfts .nft-box .nft-item .nft img {
+  width: 100%;
+}
+/*# sourceMappingURL=nft-detail.css.map */

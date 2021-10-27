@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans";
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+.container{
+    padding: 1.5em;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .left-nav{
+            .logo{
+                font-weight: 800;
+            }
+        }
+    
+        .right-nav{
+            .menu-btn{
+                font-size: 2.5em;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .menu-bar{
+        left: 30em;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.5s;
+
+        ul{
+            margin-top: 2em;
+            margin-left: 0.8em;
+            li{
+                padding: 1em;
+                list-style: none;
+
+                .menu-btn{
+                    background: none;
+                    font: inherit;
+                    line-height: 1;
+                    margin: 0.5em;
+                    padding: 0.9em 1em;
+                    color: white;
+                    border-bottom: solid white 0px;
+                    transition: 0.05s;
+                    
+                    &:hover{
+                        border-bottom: solid white 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-bar.active{
+        left: 0;
+        opacity: 0.9;
+    }
+
+    .nft-title{
+        margin-top: 1em;
+        text-align: center;
+        letter-spacing: 0.5em;
+    }
+
+    .nfts{
+        
+        .nft-box{
+            text-align: left;
+            list-style: none;
+
+            .nft-item{
+                display: inline-block;
+                width: 100%;
+                padding-bottom: 20px;
+                vertical-align: top;
+
+                .nft{
+                    padding-top: 2.5em;
+                    text-align: center;
+                    overflow: hidden;
+
+                    .title{
+                        font-size: 1.5em;
+                        line-height: 1em;
+                        font-weight: 700;
+                    }
+
+                    .datecreated{
+                        padding-bottom: 1em;
+                        font-size: 1em;
+                        line-height: 1em;
+                        font-weight: 400;
+                    }
+
+                    img{
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

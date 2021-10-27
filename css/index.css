@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 1.5em;
+}
+
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container nav .left-nav .logo {
+  font-weight: 800;
+}
+
+.container nav .right-nav .menu-btn {
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.container .menu-bar {
+  left: 30em;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .menu-bar ul {
+  margin-top: 2em;
+  margin-left: 0.8em;
+}
+
+.container .menu-bar ul li {
+  padding: 1em;
+  list-style: none;
+}
+
+.container .menu-bar ul li .menu-btn {
+  background: none;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 0.9em 1em;
+  color: white;
+  border-bottom: solid white 0px;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+}
+
+.container .menu-bar ul li .menu-btn:hover {
+  border-bottom: solid white 2px;
+}
+
+.container .menu-bar.active {
+  left: 0;
+  opacity: 0.9;
+}
+
+.container .nft-title {
+  margin-top: 1em;
+  text-align: center;
+  letter-spacing: 0.5em;
+}
+
+.container .nfts .nft-box {
+  text-align: left;
+  list-style: none;
+}
+
+.container .nfts .nft-box .nft-item {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+
+.container .nfts .nft-box .nft-item .nft {
+  padding-top: 2.5em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container .nfts .nft-box .nft-item .nft .title {
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+.container .nfts .nft-box .nft-item .nft .datecreated {
+  padding-bottom: 1em;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.container .nfts .nft-box .nft-item .nft img {
+  width: 100%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */
