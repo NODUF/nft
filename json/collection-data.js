@@ -1,6 +1,3 @@
-/*####### COLLECTION #######*/
-
-//DATA
 var post=[
     {
         title: "WANT SOME HERS COFFEE?",
@@ -32,29 +29,4 @@ var post=[
         href: "sunny-day-with-master-chief",
         link: "https://rarible.com/token/0xf6793da657495ffeff9ee6350824910abc21356c:104238516375740187513133738248866004109794379427696023384912212459279381168133?tab=details"
     },
-  ];
-  
-//Loop length:
-var postLength = post.length;
-//Empty container:
-$(".nft-box").empty();
-//Loop:
-for (i=0; i<postLength; i++) {
-    //Create card structure:
-    var listItem =
-      '<li class="nft-item">'+
-        //'<a href='+"search=?"+''+post[i].href+'>'+
-        '<a>'+
-        //'<a href='+post[i].link+'>'+
-          '<div class="nft">'+
-              '<p class="title">'+post[i].title+'</p>'+
-              '<p class="datecreated">'+post[i].datecreated+'</p>'+
-              '<img src="'+post[i].nftart+'" alt="">'+
-              //'<button type="button" action="nft" method="GET">CC</button>'
-            '</a>'+
-          '</div>'+
-        '</a>'+
-      '</li>';
-    //Append thumb:
-    $(".nft-box").append(listItem);
-  };
+]
