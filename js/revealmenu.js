@@ -7,7 +7,7 @@ const toggleInfo = document.querySelector('.menu-bar');
 btn.addEventListener('click', (e)=>{
    toggleInfo.classList.toggle('active');
    if(toggleInfo.classList.contains('active')){
-      btnIcon.innerHTML = 'expand_less';
+      btnIcon.innerHTML = 'chevron_right';
    }else{
       btnIcon.innerHTML = 'menu';
    }
