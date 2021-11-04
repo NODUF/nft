@@ -6,73 +6,244 @@
     font-weight: 400;
     color: white;
     text-decoration: none;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 .container{
     padding: 1.5em;
 
     nav{
+        left: 0;
+        top: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        height: 4.7em;
+        z-index: 1000;
     
         .left-nav{
+            margin-left: 1.5em;
             .logo{
                 font-weight: 800;
             }
         }
     
         .right-nav{
-            .menu-icon{
+            margin-right: 1.5em;
+            .menu-btn{
                 font-size: 2.5em;
+                cursor: pointer;
             }
         }
     }
 
+    .menu-bar{
+        left: 60em;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        backdrop-filter: blur(20px);
+        position: fixed;
+        overflow: hidden;
+        transition: 0.5s;
+
+        ul{
+            margin-top: 10em;
+            li{
+                padding: 1em;
+                list-style: none;
+                text-align: center;
+
+                .menu-btn{
+                    background: none;
+                    font-weight: 800;
+                    font-size: 2em;
+                    line-height: 2;
+                    margin: 0.5em;
+                    padding: 0.2em 1em;
+                    color: white;
+                    border-bottom: solid white 0px;
+                    transition: 0.05s;
+                    
+                    &:hover{
+                        border-bottom: solid white 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-bar.active{
+        left: 0;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .gradient-btn{
+        display: none;
+    }
+
     .nft-title{
-        margin-top: 1em;
+        margin-top: 3em;
+        margin-bottom: 2em;
         text-align: center;
         letter-spacing: 0.5em;
     }
 
     .nfts{
-
+        
         .nft-box{
-            margin-top: 2.5em;
-            text-align: left;
             list-style: none;
 
             .nft-item{
+                margin: 0em;
+                border-radius: 1em;
                 display: inline-block;
                 width: 100%;
                 padding-bottom: 20px;
                 vertical-align: top;
 
                 .nft{
+                    padding-top: 0.5em;
+                    text-align: center;
                     overflow: hidden;
+                    text-align: left;
 
                     .title{
-                        text-align: center;
-                        font-size: 1.7em;
+                        margin-bottom: 1em;
+                        font-size: 1.5em;
                         line-height: 1em;
                         font-weight: 700;
-                        margin-bottom: 0.5em;
                     }
 
-                    p{
+                    .datecreated, .toolsused, .originalresolution, .filesize{
                         margin-top: 1em;
-                        font-size: 0.9em;
+                        font-size: 1em;
                         line-height: 1em;
                         font-weight: 400;
                     }
 
                     img{
+                        border-radius: 1em;
                         width: 100%;
+                        opacity: 1;
                     }
                 }
             }
         }
     }
+}
+
+
+//DESKTOP
+@media only screen and (min-width: 1000px){
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        padding: 3em 10em;
+    
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            .left-nav{
+                margin-left: 3em;
+                .logo{
+                    font-weight: 800;
+                }
+            }
+        
+            .right-nav{
+                margin-right: 3em;
+                .menu{
+                    display: inline-block;
+                    background: none;
+                    font-weight: 800;
+                    padding: 0.2em 1.5em;
+                    color: #898989;
+                    transition: 0.25s;
+                    
+                    &:hover{
+                        color: white;
+                    }
+                }
+                .menu-btn{
+                    display: none;
+                    font-size: 2em;
+                    cursor: pointer;
+                }
+
+                .gradient-btn{
+                    font-weight: 800;
+                    display: inline-block;
+                    padding: 0.6em 1.5em;
+                }
+            }
+        }
+    
+        .menu-bar{
+            display: none;
+        }
+    
+        .nft-title{
+            margin-top: 1em;
+            text-align: center;
+            letter-spacing: 0.5em;
+        }
+    
+        .nfts{
+            
+            .nft-box{
+                list-style: none;
+    
+                .nft-item{
+                    margin: 0.5em;
+                    display: inline-flex;
+                    width: 100%;
+    
+                    .nft{
+                        text-align: center;
+                        overflow: visible;
+                        text-align: left;
+    
+                        .title{
+                            font-size: 2.5em;
+                            line-height: 1em;
+                            font-weight: 700;
+                            position: relative;
+                        }
+    
+                        .datecreated, .toolsused, .originalresolution, .filesize{
+                            margin-top: 1em;
+                            font-size: 1.5em;
+                            line-height: 1em;
+                            font-weight: 400;
+                            position: relative;
+                        }
+    
+                        img{
+                            width: 100%;
+                            transition: 0.5s;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }

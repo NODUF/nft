@@ -2,32 +2,59 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="css/nft-detail.css">
+    <link rel="stylesheet" href="css/btn-anim.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="ICON" href="img/logo.svg" type="image/ico"/>
     <title>NODUF | Collection</title>
 </head>
 <body>
     <div class="container">
-        <!--Navbar-->
+            <!--Navbar-->
         <nav>
             <div class="left-nav">
                 <h1 class="logo">NODUF-NFT's</h1>
             </div>
             
             <div class="right-nav">
-                <span class="material-icons-round menu-icon">menu</span>
+                <a href="index.html" class="menu">Collection</a>
+                <a href="https://rarible.com/noduf" class="gradient-btn">Store</a>
+                <span class="material-icons-round menu-btn">menu</span>
             </div>
         </nav>
 
-        <div class="nfts">
-            <ul class="nft-box">
-                <!-- JSON Here! -->
+        <!--Menu-mobile-->
+        <div class="menu-bar">
+            <ul>
+                <li><a href="index.html" class="menu-btn btn">Collection</a></li>
+                <li><a href="https://rarible.com/noduf" class="menu-btn btn">Store</a></li>
             </ul>
         </div>
-        
+
+        <!--NFT's-->
+        <img src="" alt="">
+        <h1 class="nft-title"></h1>
+        <div class="nfts">
+            <ul class="nft-box">
+                <li class="nft-item">
+                    <span>
+                        <div class="nft">
+                            <p class="title">TITLE</p>
+                            <img src="" alt="">
+                            <p class="datecreated">DATE CREATED:<br></p>
+                            <p class="toolsused">TOOLS USED:<br></p>
+                            <p class="originalresolution">ORIGINAL RESOLUTION:<br></p>
+                            <p class="filesize">FILE SIZE:<br></p>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </div>
     </div>
+
     <script src="js/detail.js"></script>
+    <script src="js/revealmenu.js"></script>
 </body>
+</html>

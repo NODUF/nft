@@ -10,36 +10,32 @@
 
 body {
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .container {
   padding: 10em;
   text-align: center;
+  overflow: hidden;
 }
 
 .container .title {
-  margin-top: 2em;
   font-size: 5em;
   line-height: 1em;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 }
 
 .container .description {
-  padding-bottom: 5em;
+  font-size: 0.8em;
+  padding-bottom: 1.5em;
 }
 
-.container .btn {
-  border: 2px solid;
-  line-height: 1;
-  padding: 0.9em 2em;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-
-.container .btn:hover {
-  color: black;
+.container .gradient-btn {
+  font-weight: 800;
+  display: inline-block;
+  padding: 1em 1.5em;
 }
 
 .container img {
@@ -49,5 +45,11 @@ body {
   z-index: -10;
   opacity: 0.1;
   width: 150%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    margin-top: 5em;
+  }
 }
 /*# sourceMappingURL=404.css.map */

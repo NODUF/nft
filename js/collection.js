@@ -44,8 +44,9 @@ for (i=0; i<postLength; i++) {
     var listItem =
       '<li class="nft-item">'+
         //'<a href='+"search=?"+''+post[i].href+'>'+
-        '<a>'+
+        //'<a>'+
         //'<a href='+post[i].link+'>'+
+        '<a href='+"nft-detail.html?nft="+''+post[i].href+'>' +
           '<div class="nft">'+
               '<p class="title">'+post[i].title+'</p>'+
               '<p class="datecreated">'+post[i].datecreated+'</p>'+

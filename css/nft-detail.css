@@ -6,10 +6,13 @@
   font-weight: 400;
   color: white;
   text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .container {
@@ -17,6 +20,8 @@ body {
 }
 
 .container nav {
+  left: 0;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,29 +31,99 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  height: 4.7em;
+  z-index: 1000;
+}
+
+.container nav .left-nav {
+  margin-left: 1.5em;
 }
 
 .container nav .left-nav .logo {
   font-weight: 800;
 }
 
-.container nav .right-nav .menu-icon {
+.container nav .right-nav {
+  margin-right: 1.5em;
+}
+
+.container nav .right-nav .menu-btn {
   font-size: 2.5em;
+  cursor: pointer;
+}
+
+.container .menu-bar {
+  left: 60em;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: fixed;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .menu-bar ul {
+  margin-top: 10em;
+}
+
+.container .menu-bar ul li {
+  padding: 1em;
+  list-style: none;
+  text-align: center;
+}
+
+.container .menu-bar ul li .menu-btn {
+  background: none;
+  font-weight: 800;
+  font-size: 2em;
+  line-height: 2;
+  margin: 0.5em;
+  padding: 0.2em 1em;
+  color: white;
+  border-bottom: solid white 0px;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+}
+
+.container .menu-bar ul li .menu-btn:hover {
+  border-bottom: solid white 2px;
+}
+
+.container .menu-bar.active {
+  left: 0;
+}
+
+.container .menu {
+  display: none;
+}
+
+.container .gradient-btn {
+  display: none;
 }
 
 .container .nft-title {
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 2em;
   text-align: center;
   letter-spacing: 0.5em;
 }
 
 .container .nfts .nft-box {
-  margin-top: 2.5em;
-  text-align: left;
   list-style: none;
 }
 
 .container .nfts .nft-box .nft-item {
+  margin: 0em;
+  border-radius: 1em;
   display: inline-block;
   width: 100%;
   padding-bottom: 20px;
@@ -56,25 +131,122 @@ body {
 }
 
 .container .nfts .nft-box .nft-item .nft {
+  padding-top: 0.5em;
+  text-align: center;
   overflow: hidden;
+  text-align: left;
 }
 
 .container .nfts .nft-box .nft-item .nft .title {
-  text-align: center;
-  font-size: 1.7em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
   line-height: 1em;
   font-weight: 700;
-  margin-bottom: 0.5em;
 }
 
-.container .nfts .nft-box .nft-item .nft p {
+.container .nfts .nft-box .nft-item .nft .datecreated, .container .nfts .nft-box .nft-item .nft .toolsused, .container .nfts .nft-box .nft-item .nft .originalresolution, .container .nfts .nft-box .nft-item .nft .filesize {
   margin-top: 1em;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1em;
   font-weight: 400;
 }
 
 .container .nfts .nft-box .nft-item .nft img {
+  border-radius: 1em;
   width: 100%;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    padding: 3em 10em;
+  }
+  .container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container nav .left-nav {
+    margin-left: 3em;
+  }
+  .container nav .left-nav .logo {
+    font-weight: 800;
+  }
+  .container nav .right-nav {
+    margin-right: 3em;
+  }
+  .container nav .right-nav .menu {
+    display: inline-block;
+    background: none;
+    font-weight: 800;
+    padding: 0.2em 1.5em;
+    color: #898989;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  .container nav .right-nav .menu:hover {
+    color: white;
+  }
+  .container nav .right-nav .menu-btn {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .container nav .right-nav .gradient-btn {
+    font-weight: 800;
+    display: inline-block;
+    padding: 0.6em 1.5em;
+  }
+  .container .menu-bar {
+    display: none;
+  }
+  .container .nft-title {
+    margin-top: 1em;
+    text-align: center;
+    letter-spacing: 0.5em;
+  }
+  .container .nfts .nft-box {
+    list-style: none;
+  }
+  .container .nfts .nft-box .nft-item {
+    margin: 0.5em;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%;
+  }
+  .container .nfts .nft-box .nft-item .nft {
+    text-align: center;
+    overflow: visible;
+    text-align: left;
+  }
+  .container .nfts .nft-box .nft-item .nft .title {
+    font-size: 2.5em;
+    line-height: 1em;
+    font-weight: 700;
+    position: relative;
+  }
+  .container .nfts .nft-box .nft-item .nft .datecreated, .container .nfts .nft-box .nft-item .nft .toolsused, .container .nfts .nft-box .nft-item .nft .originalresolution, .container .nfts .nft-box .nft-item .nft .filesize {
+    margin-top: 1em;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: 400;
+    position: relative;
+  }
+  .container .nfts .nft-box .nft-item .nft img {
+    width: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=nft-detail.css.map */
