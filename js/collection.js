@@ -3,6 +3,16 @@
 //DATA
 var post=[
     {
+      title: "SOUL KEY",
+      datecreated:"11/23/21",
+      toolsused:"Blender",
+      originalresolution:"2000 x 2500",
+      filesize: "5,282,733 bytes",
+      nftart: "nfts/soul-key.png",
+      href: "soul-key",
+      link: "https://rarible.com/token/0xF6793dA657495ffeFF9Ee6350824910Abc21356C:104238516375740187513133738248866004109794379427696023384912212459279381168142"
+    },
+    {
         title: "WANT SOME HERS COFFEE?",
         datecreated:"10/27/21",
         toolsused:"Blender, Photoshop",

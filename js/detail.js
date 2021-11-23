@@ -32,6 +32,16 @@ var post=[
     href: "want-some-hers-coffee",
     link: "https://rarible.com/token/0xf6793da657495ffeff9ee6350824910abc21356c:104238516375740187513133738248866004109794379427696023384912212459279381168141?tab=details"
 },
+{
+  title: "SOUL KEY",
+  datecreated:"11/23/21",
+  toolsused:"Blender",
+  originalresolution:"2000 x 2500",
+  filesize: "5,282,733 bytes",
+  nftart: "nfts/soul-key.png",
+  href: "soul-key",
+  link: "https://rarible.com/token/0xF6793dA657495ffeFF9Ee6350824910Abc21356C:104238516375740187513133738248866004109794379427696023384912212459279381168142"
+},
 ];
   
 //Loop length:
@@ -57,6 +67,9 @@ function IfNotFound(){
 
 //GETTING DATA
 $(document).ready(function() {
+  if (window.location.href.indexOf("?nft=soul-key") > -1){
+    nftid = 3
+  }
   if (window.location.href.indexOf("?nft=want-some-hers-coffee") > -1){
     nftid = 2
   }
