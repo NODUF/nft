@@ -81,6 +81,9 @@ $(document).ready(function() {
   if (window.location.href.indexOf("?nft=sunny-day-with-master-chief") > -1){
     nftid = 0
   }
+  else{
+    IfNotFound();
+  }
 
     console.log(nftid)
     var listItem = 
